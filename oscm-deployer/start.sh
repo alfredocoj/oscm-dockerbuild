@@ -112,7 +112,7 @@ if [ ${INITDB} == "true" ]; then
     docker-compose -f docker-compose-initdb.yml -p $(basename ${DOCKER_PATH}) stop
     docker-compose -f docker-compose-initdb.yml -p $(basename ${DOCKER_PATH}) rm -f
 fi
-
+ 
 # If the user wants us to start up the application, do it now
 if [ ${STARTUP} == "true" ] && [ -S /var/run/docker.sock ]; then
     # If the Docker socket is not mounted, abort
